@@ -256,13 +256,13 @@ function Catalogo() {
     }
 
     return (
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white font-creato">
         {/* HEADER DE LA CATEGORÍA */}
         <div className="bg-gradient-to-br from-[#057CCC]/10 to-white py-12">
           <div className="max-w-7xl mx-auto px-6">
             <button 
               onClick={handleBackToCatalog}
-              className="flex items-center gap-2 text-[#057CCC] hover:text-[#046bb8] mb-6 transition-colors font-semibold"
+              className="flex items-center gap-2 text-[#057CCC] hover:text-[#046bb8] mb-6 transition-colors font-creato font-semibold"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -271,7 +271,7 @@ function Catalogo() {
             </button>
             
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+              <h1 className="text-5xl md:text-6xl font-creato font-bold text-gray-900 mb-4">
                 {title}
               </h1>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -297,15 +297,15 @@ function Catalogo() {
                   />
                 </div>
                 <div className="p-4">
-                  <p className="text-xs text-gray-500 uppercase mb-1 font-semibold">{item.brand}</p>
-                  <h4 className="font-bold text-sm mb-2 text-gray-800">{item.name}</h4>
+                  <p className="text-xs text-gray-500 uppercase mb-1 font-creato font-semibold">{item.brand}</p>
+                  <h4 className="font-creato font-bold text-sm mb-2 text-gray-800">{item.name}</h4>
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-gray-400 line-through text-sm">{item.oldPrice}</span>
-                    <span className="text-red-600 font-bold">{item.price}</span>
+                    <span className="text-red-600 font-creato font-bold">{item.price}</span>
                   </div>
                   <button 
                     onClick={() => handleAddToCart(item)}
-                    className="w-full bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white py-2 text-sm font-medium rounded-lg hover:from-[#046bb8] hover:to-[#035a9e] transition-all transform hover:scale-105"
+                    className="w-full bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white py-2 text-sm font-creato font-medium rounded-lg hover:from-[#046bb8] hover:to-[#035a9e] transition-all transform hover:scale-105"
                   >
                     Agregar al Carrito
                   </button>
@@ -325,7 +325,7 @@ function Catalogo() {
 
   // CATÁLOGO PRINCIPAL
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-creato">
       {/* NOTIFICACIÓN DE CARRITO */}
       {showCartNotification && (
         <div className="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-bounce">
@@ -333,7 +333,7 @@ function Catalogo() {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            <span>¡{notificationProduct} agregado al carrito!</span>
+            <span className="font-creato">¡{notificationProduct} agregado al carrito!</span>
           </div>
         </div>
       )}
@@ -342,7 +342,7 @@ function Catalogo() {
       <div className="bg-gray-100 border-b">
         <div className="max-w-7xl mx-auto px-6 py-2">
           <div className="flex justify-between items-center">
-            <div className="text-sm text-gray-600">
+            <div className="text-sm text-gray-600 font-creato">
               {isLoggedIn ? (
                 <span>Bienvenido, {userEmail}</span>
               ) : (
@@ -354,7 +354,7 @@ function Catalogo() {
                 <>
                   <button 
                     onClick={handleGoToCart}
-                    className="flex items-center gap-2 bg-[#057CCC] text-white px-4 py-2 rounded-lg hover:bg-[#046bb8] transition-all"
+                    className="flex items-center gap-2 bg-[#057CCC] text-white px-4 py-2 rounded-lg hover:bg-[#046bb8] transition-all font-creato"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -363,7 +363,7 @@ function Catalogo() {
                   </button>
                   <button 
                     onClick={handleLogout}
-                    className="text-gray-600 hover:text-gray-800 text-sm font-medium"
+                    className="text-gray-600 hover:text-gray-800 text-sm font-creato font-medium"
                   >
                     Cerrar Sesión
                   </button>
@@ -371,7 +371,7 @@ function Catalogo() {
               ) : (
                 <button 
                   onClick={() => navigate('/registro')}
-                  className="text-[#057CCC] hover:text-[#046bb8] font-semibold"
+                  className="text-[#057CCC] hover:text-[#046bb8] font-creato font-semibold"
                 >
                   Iniciar Sesión / Registrarse
                 </button>
@@ -385,11 +385,11 @@ function Catalogo() {
       <section className="bg-gradient-to-br from-[#057CCC]/10 to-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+            <h1 className="text-5xl md:text-6xl font-creato font-bold text-gray-900 mb-4">
               Destacados
               <span className="block text-[#057CCC]">Lentes de Sol</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto font-creato">
               Descubre los modelos más vendidos y exclusivos de la temporada
             </p>
           </div>
@@ -426,21 +426,21 @@ function Catalogo() {
                       <img src={item.img} alt={item.name} className="w-full h-48 object-contain" />
                     </div>
                     <div className="absolute top-4 left-4">
-                      <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                      <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-creato font-bold">
                         MÁS VENDIDO
                       </span>
                     </div>
                   </div>
                   <div className="p-6">
-                    <p className="text-xs text-gray-500 uppercase mb-1 font-semibold">{item.brand}</p>
-                    <h4 className="font-bold text-lg mb-3 text-gray-800">{item.name}</h4>
+                    <p className="text-xs text-gray-500 uppercase mb-1 font-creato font-semibold">{item.brand}</p>
+                    <h4 className="font-creato font-bold text-lg mb-3 text-gray-800">{item.name}</h4>
                     <div className="flex items-center gap-3 mb-4">
                       <span className="text-gray-400 line-through text-sm">{item.oldPrice}</span>
-                      <span className="text-red-600 font-bold text-xl">{item.price}</span>
+                      <span className="text-red-600 font-creato font-bold text-xl">{item.price}</span>
                     </div>
                     <button 
                       onClick={() => handleAddToCart(item)}
-                      className="w-full bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white py-3 px-6 rounded-xl font-semibold hover:from-[#046bb8] hover:to-[#035a9e] transition-all transform hover:scale-105"
+                      className="w-full bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white py-3 px-6 rounded-xl font-creato font-semibold hover:from-[#046bb8] hover:to-[#035a9e] transition-all transform hover:scale-105"
                     >
                       Agregar al Carrito
                     </button>
@@ -458,7 +458,7 @@ function Catalogo() {
           <div className="bg-gray-100 rounded-2xl p-2 flex gap-2">
             <button
               onClick={() => setActiveCategory('destacados')}
-              className={`px-8 py-3 rounded-xl font-semibold transition-all ${
+              className={`px-8 py-3 rounded-xl font-creato font-semibold transition-all ${
                 activeCategory === 'destacados' 
                   ? 'bg-white text-[#057CCC] shadow-lg' 
                   : 'text-gray-600 hover:text-[#057CCC]'
@@ -468,7 +468,7 @@ function Catalogo() {
             </button>
             <button
               onClick={() => setActiveCategory('sol')}
-              className={`px-8 py-3 rounded-xl font-semibold transition-all ${
+              className={`px-8 py-3 rounded-xl font-creato font-semibold transition-all ${
                 activeCategory === 'sol' 
                   ? 'bg-white text-[#057CCC] shadow-lg' 
                   : 'text-gray-600 hover:text-[#057CCC]'
@@ -478,7 +478,7 @@ function Catalogo() {
             </button>
             <button
               onClick={() => setActiveCategory('oftalmicos')}
-              className={`px-8 py-3 rounded-xl font-semibold transition-all ${
+              className={`px-8 py-3 rounded-xl font-creato font-semibold transition-all ${
                 activeCategory === 'oftalmicos' 
                   ? 'bg-white text-[#057CCC] shadow-lg' 
                   : 'text-gray-600 hover:text-[#057CCC]'
@@ -498,15 +498,15 @@ function Catalogo() {
                   <img src={item.img} alt={item.name} className="w-full h-40 object-contain" />
                 </div>
                 <div className="p-4">
-                  <p className="text-xs text-gray-500 uppercase mb-1 font-semibold">{item.brand}</p>
-                  <h4 className="font-bold text-sm mb-2 text-gray-800">{item.name}</h4>
+                  <p className="text-xs text-gray-500 uppercase mb-1 font-creato font-semibold">{item.brand}</p>
+                  <h4 className="font-creato font-bold text-sm mb-2 text-gray-800">{item.name}</h4>
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-gray-400 line-through text-sm">{item.oldPrice}</span>
-                    <span className="text-red-600 font-bold">{item.price}</span>
+                    <span className="text-red-600 font-creato font-bold">{item.price}</span>
                   </div>
                   <button 
                     onClick={() => handleAddToCart(item)}
-                    className="w-full bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white py-2 text-sm font-medium rounded-lg hover:from-[#046bb8] hover:to-[#035a9e] transition-all transform hover:scale-105"
+                    className="w-full bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white py-2 text-sm font-creato font-medium rounded-lg hover:from-[#046bb8] hover:to-[#035a9e] transition-all transform hover:scale-105"
                   >
                     Agregar al Carrito
                   </button>
@@ -524,15 +524,15 @@ function Catalogo() {
                   <img src={item.img} alt={item.name} className="w-full h-40 object-contain" />
                 </div>
                 <div className="p-4">
-                  <p className="text-xs text-gray-500 uppercase mb-1 font-semibold">{item.brand}</p>
-                  <h4 className="font-bold text-sm mb-2 text-gray-800">{item.name}</h4>
+                  <p className="text-xs text-gray-500 uppercase mb-1 font-creato font-semibold">{item.brand}</p>
+                  <h4 className="font-creato font-bold text-sm mb-2 text-gray-800">{item.name}</h4>
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-gray-400 line-through text-sm">{item.oldPrice}</span>
-                    <span className="text-red-600 font-bold">{item.price}</span>
+                    <span className="text-red-600 font-creato font-bold">{item.price}</span>
                   </div>
                   <button 
                     onClick={() => handleAddToCart(item)}
-                    className="w-full bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white py-2 text-sm font-medium rounded-lg hover:from-[#046bb8] hover:to-[#035a9e] transition-all transform hover:scale-105"
+                    className="w-full bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white py-2 text-sm font-creato font-medium rounded-lg hover:from-[#046bb8] hover:to-[#035a9e] transition-all transform hover:scale-105"
                   >
                     Agregar al Carrito
                   </button>
@@ -559,8 +559,8 @@ function Catalogo() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div className="absolute bottom-8 left-8 text-white">
-              <h3 className="text-4xl font-bold mb-2">Ellos →</h3>
-              <p className="text-lg opacity-90">Estilo masculino</p>
+              <h3 className="text-4xl font-creato font-bold mb-2">Ellos →</h3>
+              <p className="text-lg opacity-90 font-creato">Estilo masculino</p>
             </div>
           </button>
 
@@ -576,8 +576,8 @@ function Catalogo() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div className="absolute bottom-8 left-8 text-white">
-              <h3 className="text-4xl font-bold mb-2">Ellas →</h3>
-              <p className="text-lg opacity-90">Elegancia femenina</p>
+              <h3 className="text-4xl font-creato font-bold mb-2">Ellas →</h3>
+              <p className="text-lg opacity-90 font-creato">Elegancia femenina</p>
             </div>
           </button>
 
@@ -593,8 +593,8 @@ function Catalogo() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div className="absolute bottom-8 left-8 text-white">
-              <h3 className="text-4xl font-bold mb-2">Niños →</h3>
-              <p className="text-lg opacity-90">Diversión y protección</p>
+              <h3 className="text-4xl font-creato font-bold mb-2">Niños →</h3>
+              <p className="text-lg opacity-90 font-creato">Diversión y protección</p>
             </div>
           </button>
 

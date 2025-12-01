@@ -130,20 +130,20 @@ export default function Agendar() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen bg-gray-50 text-gray-800 font-creato">
       {/* HEADER */}
       <header className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-12">
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
             <div className="flex items-center gap-4">
-              <div className="text-3xl md:text-4xl font-extrabold tracking-widest text-[#057CCC]">LAGOZ</div>
+              <div className="text-3xl md:text-4xl font-creato font-extrabold tracking-widest text-[#057CCC]">LAGOZ</div>
               <div className="hidden md:block w-px h-12 bg-gray-300"></div>
             </div>
             <div>
-              <h1 className="text-2xl md:text-3xl font-light leading-tight">
+              <h1 className="text-2xl md:text-3xl font-creato font-light leading-tight">
                 PROGRAME UN EXAMEN DE LA VISTA PARA USTED Y SU FAMILIA
               </h1>
-              <p className="mt-3 text-sm text-gray-600 max-w-2xl">
+              <p className="mt-3 text-sm text-gray-600 max-w-2xl font-creato">
                 Reserve su fecha y horario preferido en su tienda más cercana
               </p>
             </div>
@@ -155,38 +155,38 @@ export default function Agendar() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
         <div className="bg-white border rounded-lg p-6 shadow-sm">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div className="font-semibold text-sm uppercase tracking-wider text-gray-500">
+            <div className="font-creato font-semibold text-sm uppercase tracking-wider text-gray-500">
               CÓMO AGENDAR
             </div>
             
             <div className="w-full md:w-auto flex-1 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               {/* Paso 1 */}
               <div className="flex items-center gap-4 p-3 rounded-lg bg-white border border-gray-200">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#057CCC] text-white font-bold text-lg">
+                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#057CCC] text-white font-creato font-bold text-lg">
                   1
                 </div>
                 <div className="text-sm">
-                  <div className="font-semibold">SELECCIONA LA TIENDA DONDE QUIERES ATENDER</div>
+                  <div className="font-creato font-semibold">SELECCIONA LA TIENDA DONDE QUIERES ATENDER</div>
                 </div>
               </div>
 
               {/* Paso 2 */}
               <div className="flex items-center gap-4 p-3 rounded-lg bg-white border border-gray-200">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#057CCC] text-white font-bold text-lg">
+                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#057CCC] text-white font-creato font-bold text-lg">
                   2
                 </div>
                 <div className="text-sm">
-                  <div className="font-semibold">SELECCIONA EL SERVICIO DESEADO</div>
+                  <div className="font-creato font-semibold">SELECCIONA EL SERVICIO DESEADO</div>
                 </div>
               </div>
 
               {/* Paso 3 */}
               <div className="flex items-center gap-4 p-3 rounded-lg bg-white border border-gray-200">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#057CCC] text-white font-bold text-lg">
+                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#057CCC] text-white font-creato font-bold text-lg">
                   3
                 </div>
                 <div className="text-sm">
-                  <div className="font-semibold">SELECCIONA LA FECHA E INGRESA TUS DATOS PARA CONFIRMAR LA CITA</div>
+                  <div className="font-creato font-semibold">SELECCIONA LA FECHA E INGRESA TUS DATOS PARA CONFIRMAR LA CITA</div>
                 </div>
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function Agendar() {
           {/* LEFT COLUMN - Servicios */}
           <aside className="lg:col-span-3 space-y-6">
             <div className="bg-white border rounded-lg p-5 shadow-sm">
-              <h3 className="text-base font-bold mb-4 uppercase text-gray-700">
+              <h3 className="text-base font-creato font-bold mb-4 uppercase text-gray-700">
                 NUESTROS SERVICIOS DISPONIBLES:
               </h3>
               
@@ -220,8 +220,8 @@ export default function Agendar() {
                       className="p-4 cursor-pointer flex items-center justify-between"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="text-[#057CCC] font-bold text-lg">{service.icon}</span>
-                        <span className="text-sm font-medium">{service.title}</span>
+                        <span className="text-[#057CCC] font-creato font-bold text-lg">{service.icon}</span>
+                        <span className="text-sm font-creato font-medium">{service.title}</span>
                       </div>
                       <span className={`text-[#057CCC] text-lg transform transition-transform ${
                         expandedService === service.id ? 'rotate-180' : ''
@@ -232,9 +232,9 @@ export default function Agendar() {
                     
                     {expandedService === service.id && (
                       <div className="px-4 pb-4 pt-2 border-t border-gray-100">
-                        <p className="text-sm text-gray-600 mb-3 leading-relaxed">{service.description}</p>
+                        <p className="text-sm text-gray-600 mb-3 leading-relaxed font-creato">{service.description}</p>
                         {service.ageRestriction && (
-                          <p className="text-xs text-gray-500 italic">{service.ageRestriction}</p>
+                          <p className="text-xs text-gray-500 italic font-creato">{service.ageRestriction}</p>
                         )}
                       </div>
                     )}
@@ -244,20 +244,20 @@ export default function Agendar() {
             </div>
 
             <div className="bg-white border rounded-lg p-5 shadow-sm">
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-sm text-gray-600 mb-4 font-creato">
                 Si ya tienes una cita agendada y necesitas reprogramarla o anularla, puedes hacerlo aquí:
               </p>
 
               <div className="grid grid-cols-1 gap-3">
                 <button 
                   onClick={() => alert("Para reagendar tu cita, por favor contáctanos al 914 610 769")}
-                  className="px-4 py-3 bg-[#057CCC] text-white text-sm font-semibold rounded-lg hover:bg-[#046bb8] transition shadow-sm"
+                  className="px-4 py-3 bg-[#057CCC] text-white text-sm font-creato font-semibold rounded-lg hover:bg-[#046bb8] transition shadow-sm"
                 >
                   Reagendar cita
                 </button>
                 <button 
                   onClick={cancelarCita}
-                  className="px-4 py-3 bg-gray-200 text-gray-700 text-sm font-semibold rounded-lg hover:bg-gray-300 transition shadow-sm"
+                  className="px-4 py-3 bg-gray-200 text-gray-700 text-sm font-creato font-semibold rounded-lg hover:bg-gray-300 transition shadow-sm"
                 >
                   Anular cita
                 </button>
@@ -273,23 +273,23 @@ export default function Agendar() {
                 className="flex items-center gap-3 px-4 py-3 w-full text-left hover:bg-gray-50 transition rounded-lg"
               >
                 <span className={`text-[#057CCC] text-sm transform transition-transform ${showFilters ? 'rotate-90' : ''}`}>▶</span>
-                <span className="text-sm font-semibold">Filtrar resultados</span>
+                <span className="text-sm font-creato font-semibold">Filtrar resultados</span>
               </button>
               
               {showFilters && (
                 <div className="mt-4 p-4 bg-gray-50 rounded-lg border">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Buscar por ubicación</label>
+                      <label className="block text-sm font-creato font-medium text-gray-700 mb-1">Buscar por ubicación</label>
                       <input 
                         type="text" 
                         placeholder="Ingresa tu ubicación"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC]"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC] font-creato"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Filtrar por servicio</label>
-                      <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC]">
+                      <label className="block text-sm font-creato font-medium text-gray-700 mb-1">Filtrar por servicio</label>
+                      <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC] font-creato">
                         <option>Todos los servicios</option>
                         {services.map(service => (
                           <option key={service.id}>{service.title}</option>
@@ -300,25 +300,23 @@ export default function Agendar() {
                 </div>
               )}
               
-              <p className="text-sm text-gray-600 mt-3 px-2">1 tienda encontrada</p>
+              <p className="text-sm text-gray-600 mt-3 px-2 font-creato">1 tienda encontrada</p>
             </div>
 
             {/* TIENDA HUÁNUCO */}
             <div className="bg-white border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h5 className="text-xl font-bold tracking-wide">LAGOZ - 2 DE MAYO</h5>
-                  <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">Abierto</span>
+                  <h5 className="text-xl font-creato font-bold tracking-wide">LAGOZ - 2 DE MAYO</h5>
+                  <span className="bg-green-100 text-green-800 text-xs font-creato font-medium px-2 py-1 rounded">Abierto</span>
                 </div>
                 
                 <div className="flex items-start gap-2 mb-2">
-               
-                  <p className="text-sm text-gray-700">AV. 2 DE MAYO 1066, HUÁNUCO, PERÚ</p>
+                  <p className="text-sm text-gray-700 font-creato">AV. 2 DE MAYO 1066, HUÁNUCO, PERÚ</p>
                 </div>
                 
                 <div className="flex items-center gap-2 mb-4">
-             
-                  <a href="tel:+51 914 610 769" className="text-sm text-[#057CCC] hover:underline font-medium">
+                  <a href="tel:+51 914 610 769" className="text-sm text-[#057CCC] hover:underline font-creato font-medium">
                     914 610 769
                   </a>
                 </div>
@@ -326,39 +324,36 @@ export default function Agendar() {
                 {/* HORARIOS DE ATENCIÓN */}
                 <div className="mb-6 p-4 bg-[#057CCC]/10 border border-[#057CCC]/20 rounded-lg">
                   <div className="flex items-center gap-2 mb-2">
-                  
-                    <h6 className="text-sm font-semibold text-[#057CCC]">Horarios de atención:</h6>
+                    <h6 className="text-sm font-creato font-semibold text-[#057CCC]">Horarios de atención:</h6>
                   </div>
-                  <div className="grid grid-cols-2 gap-2 text-sm text-[#057CCC]">
+                  <div className="grid grid-cols-2 gap-2 text-sm text-[#057CCC] font-creato">
                     <div className="flex justify-between">
                       <span>Lunes - Viernes:</span>
-                      <span className="font-medium">9:00 AM - 7:00 PM</span>
+                      <span className="font-creato font-medium">9:00 AM - 7:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Sábados:</span>
-                      <span className="font-medium">9:00 AM - 7:00 PM</span>
+                      <span className="font-creato font-medium">9:00 AM - 7:00 PM</span>
                     </div>
                     <div className="flex justify-between col-span-2">
                       <span>Domingos:</span>
-                      <span className="font-medium text-red-600">Cerrado</span>
+                      <span className="font-creato font-medium text-red-600">Cerrado</span>
                     </div>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-4 mb-6">
-                  <a href="#" className="text-sm text-[#057CCC] hover:underline font-medium flex items-center gap-1">
-                  
+                  <a href="#" className="text-sm text-[#057CCC] hover:underline font-creato font-medium flex items-center gap-1">
                   </a>
                   <span className="text-gray-300">|</span>
-                  <a href="#" className="text-sm text-[#057CCC] hover:underline font-medium flex items-center gap-1">
-                   
+                  <a href="#" className="text-sm text-[#057CCC] hover:underline font-creato font-medium flex items-center gap-1">
                   </a>
                 </div>
 
                 {/* BOTÓN PARA PROGRAMAR CITA */}
                 <button
                   onClick={() => programarCita("LAGOZ - 2 DE MAYO")}
-                  className="w-full px-6 py-3 bg-[#057CCC] text-white font-bold text-sm rounded-lg hover:bg-[#046bb8] transition shadow-sm transform hover:scale-105 duration-200"
+                  className="w-full px-6 py-3 bg-[#057CCC] text-white font-creato font-bold text-sm rounded-lg hover:bg-[#046bb8] transition shadow-sm transform hover:scale-105 duration-200"
                 >
                   Programar examen
                 </button>
@@ -366,7 +361,7 @@ export default function Agendar() {
                 {/* Mensaje de confirmación */}
                 {selectedStore && !showAppointmentForm && !appointmentConfirmed && (
                   <div className="mt-4 p-3 bg-[#057CCC]/10 border border-[#057CCC]/20 rounded-lg">
-                    <p className="text-sm text-[#057CCC] text-center">
+                    <p className="text-sm text-[#057CCC] text-center font-creato">
                       ✅ Has seleccionado: <strong>{selectedStore}</strong>
                     </p>
                   </div>
@@ -381,20 +376,20 @@ export default function Agendar() {
               <div className="flex border-b">
                 <button 
                   onClick={() => setActiveTab("mapa")}
-                  className={`flex-1 px-4 py-3 font-semibold text-center transition ${activeTab === "mapa" ? "bg-white text-[#057CCC] border-b-2 border-[#057CCC]" : "text-gray-600 hover:bg-gray-50"}`}
+                  className={`flex-1 px-4 py-3 font-creato font-semibold text-center transition ${activeTab === "mapa" ? "bg-white text-[#057CCC] border-b-2 border-[#057CCC]" : "text-gray-600 hover:bg-gray-50"}`}
                 >
                   Mapa
                 </button>
                 <button 
                   onClick={() => setActiveTab("satelite")}
-                  className={`flex-1 px-4 py-3 font-semibold text-center transition ${activeTab === "satelite" ? "bg-white text-[#057CCC] border-b-2 border-[#057CCC]" : "text-gray-600 hover:bg-gray-50"}`}
+                  className={`flex-1 px-4 py-3 font-creato font-semibold text-center transition ${activeTab === "satelite" ? "bg-white text-[#057CCC] border-b-2 border-[#057CCC]" : "text-gray-600 hover:bg-gray-50"}`}
                 >
                   Satélite
                 </button>
               </div>
 
               <div className="relative h-[400px] md:h-[500px]">
-                <button className="absolute top-4 right-4 z-10 bg-white border rounded-lg px-3 py-2 text-sm shadow hover:bg-gray-50 transition">
+                <button className="absolute top-4 right-4 z-10 bg-white border rounded-lg px-3 py-2 text-sm shadow hover:bg-gray-50 transition font-creato">
                   Ampliar el mapa
                 </button>
                 <iframe
@@ -419,15 +414,15 @@ export default function Agendar() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
-              <h3 className="text-xl font-bold mb-4">Programar Cita en {selectedStore}</h3>
+              <h3 className="text-xl font-creato font-bold mb-4">Programar Cita en {selectedStore}</h3>
               
               {/* Información de horarios en el formulario */}
               <div className="mb-6 p-4 bg-[#057CCC]/10 border border-[#057CCC]/20 rounded-lg">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-[#057CCC]">🕒</span>
-                  <h6 className="text-sm font-semibold text-[#057CCC]">Horarios disponibles:</h6>
+                  <h6 className="text-sm font-creato font-semibold text-[#057CCC]">Horarios disponibles:</h6>
                 </div>
-                <div className="text-sm text-[#057CCC]">
+                <div className="text-sm text-[#057CCC] font-creato">
                   <p><strong>Lunes a Sábado:</strong> 9:00 AM - 7:00 PM</p>
                   <p><strong>Domingos:</strong> Cerrado</p>
                   <p className="text-xs text-[#057CCC] mt-1">* Las citas tienen una duración aproximada de 30 minutos</p>
@@ -437,7 +432,7 @@ export default function Agendar() {
               <form onSubmit={handleSubmitAppointment} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-creato font-medium text-gray-700 mb-1">
                       Nombre completo *
                     </label>
                     <input
@@ -446,13 +441,13 @@ export default function Agendar() {
                       value={appointmentData.nombre}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC]"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC] font-creato"
                       placeholder="Ingresa tu nombre completo"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-creato font-medium text-gray-700 mb-1">
                       Email *
                     </label>
                     <input
@@ -461,7 +456,7 @@ export default function Agendar() {
                       value={appointmentData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC]"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC] font-creato"
                       placeholder="tu@email.com"
                     />
                   </div>
@@ -469,7 +464,7 @@ export default function Agendar() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-creato font-medium text-gray-700 mb-1">
                       Teléfono *
                     </label>
                     <input
@@ -478,13 +473,13 @@ export default function Agendar() {
                       value={appointmentData.telefono}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC]"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC] font-creato"
                       placeholder="914 610 769"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-creato font-medium text-gray-700 mb-1">
                       Servicio *
                     </label>
                     <select
@@ -492,7 +487,7 @@ export default function Agendar() {
                       value={appointmentData.servicio}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC]"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC] font-creato"
                     >
                       {services.map(service => (
                         <option key={service.id} value={service.title}>
@@ -505,7 +500,7 @@ export default function Agendar() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-creato font-medium text-gray-700 mb-1">
                       Fecha *
                     </label>
                     <input
@@ -516,12 +511,12 @@ export default function Agendar() {
                       required
                       min={getMinDate()}
                       max={getMaxDate()}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC]"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC] font-creato"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-creato font-medium text-gray-700 mb-1">
                       Hora *
                     </label>
                     <select
@@ -529,7 +524,7 @@ export default function Agendar() {
                       value={appointmentData.hora}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC]"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC] font-creato"
                     >
                       <option value="">Selecciona una hora</option>
                       {availableHours.map(hour => (
@@ -542,7 +537,7 @@ export default function Agendar() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-creato font-medium text-gray-700 mb-1">
                     Mensaje adicional
                   </label>
                   <textarea
@@ -550,7 +545,7 @@ export default function Agendar() {
                     value={appointmentData.mensaje}
                     onChange={handleInputChange}
                     rows="3"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC]"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#057CCC] font-creato"
                     placeholder="Alguna información adicional que quieras compartir..."
                   />
                 </div>
@@ -559,13 +554,13 @@ export default function Agendar() {
                   <button
                     type="button"
                     onClick={() => setShowAppointmentForm(false)}
-                    className="flex-1 px-4 py-3 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition font-medium"
+                    className="flex-1 px-4 py-3 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition font-creato font-medium"
                   >
                     Cancelar
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-4 py-3 bg-[#057CCC] text-white rounded-md hover:bg-[#046bb8] transition font-medium"
+                    className="flex-1 px-4 py-3 bg-[#057CCC] text-white rounded-md hover:bg-[#046bb8] transition font-creato font-medium"
                   >
                     Confirmar Cita
                   </button>
@@ -581,16 +576,16 @@ export default function Agendar() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg max-w-md w-full p-6 text-center">
             <div className="text-green-500 text-6xl mb-4">✅</div>
-            <h3 className="text-2xl font-bold text-green-600 mb-2">¡Cita Programada Exitosamente!</h3>
-            <p className="text-gray-600 mb-4">
+            <h3 className="text-2xl font-creato font-bold text-green-600 mb-2">¡Cita Programada Exitosamente!</h3>
+            <p className="text-gray-600 mb-4 font-creato">
               Tu cita ha sido agendada para el <strong>{appointmentData.fecha}</strong> a las <strong>{appointmentData.hora}</strong>.
             </p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 font-creato">
               Te hemos enviado un correo de confirmación a <strong>{appointmentData.email}</strong>
             </p>
             <button
               onClick={() => setAppointmentConfirmed(false)}
-              className="mt-6 px-6 py-2 bg-[#057CCC] text-white rounded-md hover:bg-[#046bb8] transition"
+              className="mt-6 px-6 py-2 bg-[#057CCC] text-white rounded-md hover:bg-[#046bb8] transition font-creato"
             >
               Aceptar
             </button>

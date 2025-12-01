@@ -68,17 +68,17 @@ function Registro() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-gray-50 py-12 font-creato">
       <div className="max-w-md mx-auto px-6">
         <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          <h1 className="text-3xl font-creato font-bold text-gray-900 mb-6 text-center">
             {isLogin ? 'Iniciar Sesión' : 'Crear Cuenta'}
           </h1>
           
           <form onSubmit={handleSubmit} className="space-y-4">
             {!isLogin && (
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-creato font-medium text-gray-700 mb-1">
                   Nombre completo
                 </label>
                 <input 
@@ -86,14 +86,14 @@ function Registro() {
                   name="nombre"
                   value={formData.nombre}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all font-creato"
                   placeholder="Ingresa tu nombre"
                 />
               </div>
             )}
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-creato font-medium text-gray-700 mb-1">
                 Email
               </label>
               <input 
@@ -101,13 +101,13 @@ function Registro() {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all font-creato"
                 placeholder="tu@email.com"
               />
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-creato font-medium text-gray-700 mb-1">
                 Contraseña
               </label>
               <input 
@@ -115,25 +115,25 @@ function Registro() {
                 name="password"
                 value={formData.password}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all font-creato"
                 placeholder={isLogin ? "Ingresa tu contraseña" : "Crea una contraseña"}
               />
             </div>
             
             <button 
               type="submit"
-              className="w-full bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white py-3 rounded-lg hover:from-[#046bb8] hover:to-[#035a9e] transition-all font-semibold transform hover:scale-105"
+              className="w-full bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white py-3 rounded-lg hover:from-[#046bb8] hover:to-[#035a9e] transition-all font-creato font-semibold transform hover:scale-105"
             >
               {isLogin ? 'Iniciar Sesión' : 'Crear Cuenta'}
             </button>
           </form>
           
           <div className="mt-6 text-center">
-            <p className="text-gray-600">
+            <p className="text-gray-600 font-creato">
               {isLogin ? '¿No tienes cuenta?' : '¿Ya tienes cuenta?'}{" "}
               <button 
                 onClick={toggleMode}
-                className="text-[#057CCC] hover:text-[#046bb8] font-semibold underline"
+                className="text-[#057CCC] hover:text-[#046bb8] font-creato font-semibold underline"
               >
                 {isLogin ? 'Regístrate' : 'Inicia Sesión'}
               </button>
@@ -144,7 +144,7 @@ function Registro() {
           <div className="mt-4 text-center">
             <button 
               onClick={() => navigate('/catalogo')}
-              className="text-gray-500 hover:text-gray-700 text-sm font-medium"
+              className="text-gray-500 hover:text-gray-700 text-sm font-creato font-medium"
             >
               ← Volver al catálogo
             </button>

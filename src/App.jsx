@@ -4,6 +4,8 @@ import Catalogo from './Catalogo';
 import Agendar from './Agendar';
 import Registro from './Registro';
 import Nosotros from './Nosotros';
+import Pago from './Pago';
+import Confirmacion from './Confirmacion';
 
 /* Componente Carrito Lateral */
 function CarritoLateral({ isOpen, onClose }) {
@@ -65,7 +67,7 @@ function CarritoLateral({ isOpen, onClose }) {
         {/* Encabezado */}
         <div className="bg-white p-4 border-b">
           <div className="flex justify-between items-center">
-            <h2 className="text-lg font-bold">CARRO DE COMPRAS ({getTotalItems()})</h2>
+            <h2 className="text-lg font-creato font-bold">CARRO DE COMPRAS ({getTotalItems()})</h2>
             <button 
               onClick={onClose}
               className="text-gray-500 hover:text-gray-700"
@@ -83,15 +85,15 @@ function CarritoLateral({ isOpen, onClose }) {
             /* Carrito vacío */
             <div className="text-center py-8 px-4">
               <div className="text-6xl mb-4">🛒</div>
-              <h3 className="text-md font-bold text-gray-800 mb-4">No tienes productos en tu carro.</h3>
+              <h3 className="text-md font-creato font-bold text-gray-800 mb-4">No tienes productos en tu carro.</h3>
               <div className="w-full h-px bg-gray-300 my-4"></div>
               
               {/* Sección de información */}
               <div className="text-center">
-                <h4 className="text-sm font-bold mb-3">Venta Telefónica</h4>
+                <h4 className="text-sm font-creato font-bold mb-3">Venta Telefónica</h4>
                 
                 <div className="mb-4">
-                  <h5 className="text-xs font-bold mb-2">ESTÁN AQUÍ</h5>
+                  <h5 className="text-xs font-creato font-bold mb-2">ESTÁN AQUÍ</h5>
                   <div className="space-y-1 text-xs text-gray-600">
                     <p>0%</p>
                     <p>EN LENTES</p>
@@ -116,9 +118,9 @@ function CarritoLateral({ isOpen, onClose }) {
                   />
                   
                   <div className="flex-1">
-                    <h4 className="font-semibold text-sm text-gray-800">{item.name}</h4>
+                    <h4 className="font-creato font-semibold text-sm text-gray-800">{item.name}</h4>
                     <p className="text-xs text-gray-500">{item.brand}</p>
-                    <p className="text-red-600 font-bold text-sm">{item.price}</p>
+                    <p className="text-red-600 font-creato font-bold text-sm">{item.price}</p>
                     
                     <div className="flex items-center gap-2 mt-2">
                       <button 
@@ -127,7 +129,7 @@ function CarritoLateral({ isOpen, onClose }) {
                       >
                         -
                       </button>
-                      <span className="text-sm font-medium w-8 text-center">{item.quantity}</span>
+                      <span className="text-sm font-creato font-medium w-8 text-center">{item.quantity}</span>
                       <button 
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
                         className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-sm hover:bg-gray-300"
@@ -155,7 +157,7 @@ function CarritoLateral({ isOpen, onClose }) {
         <div className="border-t p-4 bg-gray-50">
           {cartItems.length > 0 && (
             <div className="mb-4">
-              <div className="flex justify-between items-center text-lg font-bold">
+              <div className="flex justify-between items-center text-lg font-creato font-bold">
                 <span>Total:</span>
                 <span>S/ {calculateTotal().toFixed(2)}</span>
               </div>
@@ -169,14 +171,14 @@ function CarritoLateral({ isOpen, onClose }) {
                   onClose();
                   navigate('/carrito');
                 }}
-                className="w-full bg-[#057CCC] text-white py-3 rounded-lg hover:bg-[#046bb8] transition-all font-semibold text-center block"
+                className="w-full bg-[#057CCC] text-white py-3 rounded-lg hover:bg-[#046bb8] transition-all font-creato font-semibold text-center block"
               >
                 Ver Carrito Completo
               </button>
               <Link 
                 to="/catalogo"
                 onClick={onClose}
-                className="w-full border border-[#057CCC] text-[#057CCC] py-3 rounded-lg hover:bg-[#057CCC] hover:text-white transition-all font-semibold text-center block"
+                className="w-full border border-[#057CCC] text-[#057CCC] py-3 rounded-lg hover:bg-[#057CCC] hover:text-white transition-all font-creato font-semibold text-center block"
               >
                 Seguir Comprando
               </Link>
@@ -185,7 +187,7 @@ function CarritoLateral({ isOpen, onClose }) {
             <Link 
               to="/catalogo"
               onClick={onClose}
-              className="w-full bg-[#057CCC] text-white py-3 rounded-lg hover:bg-[#046bb8] transition-all font-semibold text-center block"
+              className="w-full bg-[#057CCC] text-white py-3 rounded-lg hover:bg-[#046bb8] transition-all font-creato font-semibold text-center block"
             >
               Ver Catálogo
             </Link>
@@ -248,7 +250,7 @@ function Carrito() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Encabezado */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">CARRO DE COMPRAS</h1>
+          <h1 className="text-4xl md:text-5xl font-creato font-bold text-gray-900 mb-4">CARRO DE COMPRAS</h1>
           <div className="w-24 h-1 bg-[#057CCC] mx-auto mb-8"></div>
         </div>
 
@@ -256,13 +258,13 @@ function Carrito() {
           /* Carrito vacío */
           <div className="bg-white rounded-2xl shadow-lg p-12 text-center mb-8">
             <div className="text-8xl mb-6">🛒</div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">No tienes productos en tu carro.</h2>
+            <h2 className="text-2xl font-creato font-bold text-gray-800 mb-4">No tienes productos en tu carro.</h2>
             <p className="text-gray-600 mb-8 max-w-md mx-auto">
               Explora nuestro catálogo y descubre los mejores lentes y monturas para ti.
             </p>
             <Link 
               to="/catalogo"
-              className="bg-[#057CCC] text-white px-8 py-4 rounded-xl hover:bg-[#046bb8] transition-all font-semibold inline-block"
+              className="bg-[#057CCC] text-white px-8 py-4 rounded-xl hover:bg-[#046bb8] transition-all font-creato font-semibold inline-block"
             >
               Ver Catálogo
             </Link>
@@ -271,10 +273,10 @@ function Carrito() {
           /* Carrito con productos */
           <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-bold">Tus Productos ({cartItems.reduce((total, item) => total + item.quantity, 0)})</h2>
+              <h2 className="text-2xl font-creato font-bold">Tus Productos ({cartItems.reduce((total, item) => total + item.quantity, 0)})</h2>
               <button 
                 onClick={clearCart}
-                className="text-red-500 hover:text-red-700 text-sm font-semibold"
+                className="text-red-500 hover:text-red-700 text-sm font-creato font-semibold"
               >
                 Vaciar Carrito
               </button>
@@ -292,9 +294,9 @@ function Carrito() {
                 />
                 
                 <div className="flex-1">
-                  <h3 className="font-semibold text-lg text-gray-800">{item.name}</h3>
+                  <h3 className="font-creato font-semibold text-lg text-gray-800">{item.name}</h3>
                   <p className="text-gray-500">{item.brand}</p>
-                  <p className="text-red-600 font-bold text-lg">{item.price}</p>
+                  <p className="text-red-600 font-creato font-bold text-lg">{item.price}</p>
                 </div>
 
                 <div className="flex items-center gap-3">
@@ -304,7 +306,7 @@ function Carrito() {
                   >
                     -
                   </button>
-                  <span className="font-semibold text-lg w-8 text-center">{item.quantity}</span>
+                  <span className="font-creato font-semibold text-lg w-8 text-center">{item.quantity}</span>
                   <button 
                     onClick={() => updateQuantity(item.id, item.quantity + 1)}
                     className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300"
@@ -326,7 +328,7 @@ function Carrito() {
 
             {/* Total y botones */}
             <div className="mt-8 pt-6 border-t border-gray-200">
-              <div className="flex justify-between items-center text-2xl font-bold mb-6">
+              <div className="flex justify-between items-center text-2xl font-creato font-bold mb-6">
                 <span>Total:</span>
                 <span>S/ {calculateTotal().toFixed(2)}</span>
               </div>
@@ -334,13 +336,16 @@ function Carrito() {
               <div className="flex gap-4">
                 <Link 
                   to="/catalogo"
-                  className="flex-1 border border-[#057CCC] text-[#057CCC] py-4 rounded-xl hover:bg-[#057CCC] hover:text-white transition-all font-semibold text-center"
+                  className="flex-1 border border-[#057CCC] text-[#057CCC] py-4 rounded-xl hover:bg-[#057CCC] hover:text-white transition-all font-creato font-semibold text-center"
                 >
                   Seguir Comprando
                 </Link>
-                <button className="flex-1 bg-green-500 text-white py-4 rounded-xl hover:bg-green-600 transition-all font-semibold">
+                <Link 
+                  to="/pago"
+                  className="flex-1 bg-green-500 text-white py-4 rounded-xl hover:bg-green-600 transition-all font-creato font-semibold text-center block"
+                >
                   Proceder al Pago
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -350,12 +355,12 @@ function Carrito() {
         <div className="bg-gradient-to-r from-[#057CCC] to-[#046bb8] rounded-2xl p-8 text-white text-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold mb-4">Visual</h3>
+              <h3 className="text-2xl font-creato font-bold mb-4">Visual</h3>
               <p className="text-lg opacity-90">Venta Telefónica</p>
             </div>
             
             <div className="border-l border-white/30 pl-8">
-              <h3 className="text-2xl font-bold mb-4">YA ESTÁN AQUÍ</h3>
+              <h3 className="text-2xl font-creato font-bold mb-4">YA ESTÁN AQUÍ</h3>
               <p className="text-lg opacity-90">Nuevos modelos disponibles</p>
             </div>
           </div>
@@ -380,9 +385,9 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#057CCC]/80 to-teal-900/60"></div>
         <div className="relative z-10 h-full flex items-center justify-center text-white text-center">
           <div>
-            <p className="text-4xl md:text-6xl font-light mb-2"></p>
+            <p className="text-4xl md:text-6xl font-creato font-light mb-2"></p>
             {/* Título más pequeño */}
-            <h2 className="text-4xl md:text-7xl font-bold">
+            <h2 className="text-4xl md:text-7xl font-creato font-bold">
               Centro Oftalmológico Lagoz
             </h2>
           </div>
@@ -406,28 +411,28 @@ function Home() {
         <div className="flex items-center whitespace-nowrap animate-scroll">
           {[...Array(2)].map((_, groupIdx) => (
             <div key={groupIdx} className="flex items-center gap-4 px-2">
-              <div className="text-white text-sm font-serif italic">TIWI</div>
-              <div className="text-white text-xs font-bold tracking-wider">THEBOOKCLUB</div>
-              <div className="text-white text-sm font-bold">
+              <div className="text-white text-sm font-creato italic">TIWI</div>
+              <div className="text-white text-xs font-creato font-bold tracking-wider">THEBOOKCLUB</div>
+              <div className="text-white text-sm font-creato font-bold">
                 BETTINELLI <span className="text-[8px]">eyewear</span>
               </div>
-              <div className="text-white text-sm font-black tracking-tight">BABIATORS.</div>
+              <div className="text-white text-sm font-creato font-black tracking-tight">BABIATORS.</div>
               <div className="flex items-center gap-0.5">
                 <div className="flex gap-0">
                   <div className="w-1 h-2 bg-[#057CCC] transform -skew-x-12"></div>
                   <div className="w-1 h-2 bg-red-500 transform -skew-x-12"></div>
                 </div>
                 <div className="text-white">
-                  <div className="text-sm font-bold">Le Specs</div>
+                  <div className="text-sm font-creato font-bold">Le Specs</div>
                   <div className="text-[7px] tracking-widest">LIVE - LOVE - LE SPECS</div>
                 </div>
               </div>
               <div className="text-white text-sm">
-                <div className="font-bold">antonia ferrario</div>
+                <div className="font-creato font-bold">antonia ferrario</div>
                 <div className="text-[8px] tracking-wider">eyewear</div>
               </div>
-              <div className="text-white text-sm font-serif italic">RAY-BAN</div>
-              <div className="text-white text-sm font-black">OAKLEY</div>
+              <div className="text-white text-sm font-creato italic">RAY-BAN</div>
+              <div className="text-white text-sm font-creato font-black">OAKLEY</div>
             </div>
           ))}
         </div>
@@ -436,13 +441,13 @@ function Home() {
       {/* NUEVA SECCIÓN DE SERVICIOS ACTUALIZADA */}
       <section id="servicios" className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
-          <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">Nuestros Servicios</h3>
+          <h3 className="text-4xl md:text-5xl font-creato font-bold text-gray-900 mt-3 mb-4">Nuestros Servicios</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Consultas Oftalmológicas */}
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 group hover:transform hover:-translate-y-2">
-            <h4 className="text-xl font-bold mb-3 text-gray-800">Consultas Oftalmológicas</h4>
+            <h4 className="text-xl font-creato font-bold mb-3 text-gray-800">Consultas Oftalmológicas</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
               Consultas oftalmológicas especializadas con profesionales certificados.
             </p>
@@ -450,7 +455,7 @@ function Home() {
 
           {/* Diagnóstico Visual */}
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 group hover:transform hover:-translate-y-2">
-            <h4 className="text-xl font-bold mb-3 text-gray-800">Diagnóstico Visual</h4>
+            <h4 className="text-xl font-creato font-bold mb-3 text-gray-800">Diagnóstico Visual</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
               Diagnóstico visual con equipos modernos y tecnología de última generación.
             </p>
@@ -458,7 +463,7 @@ function Home() {
 
           {/* Tratamientos Oculares */}
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 group hover:transform hover:-translate-y-2">
-            <h4 className="text-xl font-bold mb-3 text-gray-800">Tratamientos Oculares</h4>
+            <h4 className="text-xl font-creato font-bold mb-3 text-gray-800">Tratamientos Oculares</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
               Tratamientos y seguimiento especializado en salud ocular integral.
             </p>
@@ -466,7 +471,7 @@ function Home() {
 
           {/* Óptica Completa */}
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 group hover:transform hover:-translate-y-2">
-            <h4 className="text-xl font-bold mb-3 text-gray-800">Óptica Completa</h4>
+            <h4 className="text-xl font-creato font-bold mb-3 text-gray-800">Óptica Completa</h4>
             <p className="text-gray-600 text-sm leading-relaxed">
               Venta de monturas, lentes de medida, lentes de sol.
             </p>
@@ -480,7 +485,7 @@ function Home() {
       <section className="bg-gradient-to-br from-[#057CCC] to-indigo-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h3 className="text-4xl font-bold mb-4">Lo que dicen nuestros clientes</h3>
+            <h3 className="text-4xl font-creato font-bold mb-4">Lo que dicen nuestros clientes</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -496,7 +501,7 @@ function Home() {
                   ))}
                 </div>
                 <p className="mb-6">{test.comment}</p>
-                <p className="font-bold">{test.name}</p>
+                <p className="font-creato font-bold">{test.name}</p>
               </div>
             ))}
           </div>
@@ -537,7 +542,7 @@ export default function App() {
 
   return (
     <Router>
-      <div className="font-sans bg-white text-gray-900 min-h-screen">
+      <div className="font-creato bg-white text-gray-900 min-h-screen">
         {/* NAVBAR MÁS DELGADA CON LOGO INTEGRADO */}
         <header className="bg-white text-gray-900 shadow-lg sticky top-0 z-40">
           <nav className="max-w-7xl mx-auto px-6 py-3">
@@ -550,7 +555,7 @@ export default function App() {
                 </Link>
 
                 {/* NAVEGACIÓN PRINCIPAL - MÁS COMPACTA */}
-                <div className="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                <div className="hidden md:flex items-center space-x-6 text-sm font-creato font-semibold">
                   <Link 
                     to="/" 
                     className="hover:text-[#057CCC] cursor-pointer transition-all py-2 px-3 rounded-lg hover:bg-gray-50 flex items-center gap-2"
@@ -586,7 +591,7 @@ export default function App() {
                 {/* BOTÓN AGENDAR */}
                 <Link 
                   to="/agendar"
-                  className="bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white px-5 py-2.5 rounded-xl hover:from-[#046bb8] hover:to-[#035a9e] cursor-pointer transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-2 font-bold text-sm"
+                  className="bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white px-5 py-2.5 rounded-xl hover:from-[#046bb8] hover:to-[#035a9e] cursor-pointer transition-all shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-2 font-creato font-bold text-sm"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -606,7 +611,7 @@ export default function App() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
                     </div>
-                    <span className="text-xs font-semibold">Mi cuenta</span>
+                    <span className="text-xs font-creato font-semibold">Mi cuenta</span>
                   </Link>
 
                   {/* BOTÓN CARRITO ACTUALIZADO - Ahora abre el sidebar */}
@@ -619,9 +624,9 @@ export default function App() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                       </svg>
                     </div>
-                    <span className="text-xs font-semibold">Carrito</span>
+                    <span className="text-xs font-creato font-semibold">Carrito</span>
                     {cartItemCount > 0 && (
-                      <span className="absolute -top-1 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center shadow-sm text-[10px]">
+                      <span className="absolute -top-1 -right-2 bg-red-500 text-white text-xs font-creato font-bold rounded-full w-4 h-4 flex items-center justify-center shadow-sm text-[10px]">
                         {cartItemCount}
                       </span>
                     )}
@@ -646,7 +651,7 @@ export default function App() {
             <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3 shadow-lg">
               <Link 
                 to="/" 
-                className="flex items-center gap-3 hover:text-[#057CCC] cursor-pointer transition-colors py-2 font-semibold border-b border-gray-100"
+                className="flex items-center gap-3 hover:text-[#057CCC] cursor-pointer transition-colors py-2 font-creato font-semibold border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -656,7 +661,7 @@ export default function App() {
               </Link>
               <Link 
                 to="/catalogo" 
-                className="flex items-center gap-3 hover:text-[#057CCC] cursor-pointer transition-colors py-2 font-semibold border-b border-gray-100"
+                className="flex items-center gap-3 hover:text-[#057CCC] cursor-pointer transition-colors py-2 font-creato font-semibold border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -666,7 +671,7 @@ export default function App() {
               </Link>
               <Link 
                 to="/carrito" 
-                className="flex items-center gap-3 hover:text-[#057CCC] cursor-pointer transition-colors py-2 font-semibold border-b border-gray-100"
+                className="flex items-center gap-3 hover:text-[#057CCC] cursor-pointer transition-colors py-2 font-creato font-semibold border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -677,7 +682,7 @@ export default function App() {
               {/* ENLACE "MI CUENTA" ACTUALIZADO EN MÓVIL */}
               <Link 
                 to="/registro"
-                className="flex items-center gap-3 hover:text-[#057CCC] cursor-pointer transition-colors py-2 font-semibold border-b border-gray-100"
+                className="flex items-center gap-3 hover:text-[#057CCC] cursor-pointer transition-colors py-2 font-creato font-semibold border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -687,7 +692,7 @@ export default function App() {
               </Link>
               <Link 
                 to="/nosotros"
-                className="flex items-center gap-3 hover:text-[#057CCC] cursor-pointer transition-colors py-2 font-semibold border-b border-gray-100"
+                className="flex items-center gap-3 hover:text-[#057CCC] cursor-pointer transition-colors py-2 font-creato font-semibold border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -697,7 +702,7 @@ export default function App() {
               </Link>
               <Link 
                 to="/agendar"
-                className="bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white px-5 py-3 rounded-xl hover:from-[#046bb8] hover:to-[#035a9e] cursor-pointer transition-all shadow-lg flex items-center justify-center gap-2 font-bold mt-3 text-sm"
+                className="bg-gradient-to-r from-[#057CCC] to-[#046bb8] text-white px-5 py-3 rounded-xl hover:from-[#046bb8] hover:to-[#035a9e] cursor-pointer transition-all shadow-lg flex items-center justify-center gap-2 font-creato font-bold mt-3 text-sm"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -720,6 +725,9 @@ export default function App() {
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/registro" element={<Registro />} />
           <Route path="/nosotros" element={<Nosotros />} />
+          {/* Nuevas rutas de pago */}
+          <Route path="/pago" element={<Pago />} />
+          <Route path="/confirmacion" element={<Confirmacion />} />
         </Routes>
 
         {/* FOOTER */}
@@ -728,7 +736,7 @@ export default function App() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
               {/* COLUMNA 1: LOGO Y DESCRIPCIÓN */}
               <div className="md:col-span-2">
-                <h3 className="text-xl font-bold text-white mb-4">Óptica Lagoz</h3>
+                <h3 className="text-xl font-creato font-bold text-white mb-4">Óptica Lagoz</h3>
                 <p className="text-sm mb-6">Tu salud visual es nuestra prioridad.</p>
                 
                 {/* INFORMACIÓN DE CONTACTO */}
@@ -750,11 +758,11 @@ export default function App() {
 
               {/* COLUMNA 2: REDES SOCIALES */}
               <div className="md:col-span-2">
-                <h4 className="text-white font-bold mb-6 text-lg">Síguenos en redes sociales</h4>
+                <h4 className="text-white font-creato font-bold mb-6 text-lg">Síguenos en redes sociales</h4>
                 
                 {/* USUARIO */}
                 <div className="mb-6">
-                  <p className="text-lg font-semibold text-white">@opticalagoz</p>
+                  <p className="text-lg font-creato font-semibold text-white">@opticalagoz</p>
                   <p className="text-sm text-gray-400 mt-1">Conéctate con nosotros</p>
                 </div>
 
@@ -824,9 +832,9 @@ export default function App() {
           
           {/* Mensaje flotante similar al de la imagen */}
           <div className="absolute bottom-full right-0 mb-3 w-64 bg-white text-gray-800 p-3 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
-            <div className="font-bold mb-1">¿Te ayudamos a completar tu pedido Online?</div>
+            <div className="font-creato font-bold mb-1">¿Te ayudamos a completar tu pedido Online?</div>
             <div className="text-sm text-gray-600 mb-2">Estamos aquí para ayudarte</div>
-            <div className="bg-green-500 text-white text-center py-2 px-4 rounded font-bold">
+            <div className="bg-green-500 text-white text-center py-2 px-4 rounded font-creato font-bold">
               COMPRAR AHORA
             </div>
             {/* Flecha indicadora */}

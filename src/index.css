@@ -1,3 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/creato-display');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Opcional: Establecer Creato Display como fuente por defecto */
+body {
+  font-family: 'Creato Display', system-ui, sans-serif;
+}
